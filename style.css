@@ -1,0 +1,141 @@
+body{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 14px;
+    color: white;
+    background-color: rgb(3, 49, 49);
+}
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    position: fixed;
+    animation: muncul2 2s;
+}
+li:hover{
+    cursor: pointer;
+    background-color: white;
+    transition-duration: 1s;
+    padding: 10px 10px;
+    border-radius: 20px;
+    width: 10%;
+    height: 10%;
+}
+li{
+    display: flex;
+    flex-direction: column;
+}
+.image{
+    height: 10%;
+    width: 10%;
+    float: right;
+    overflow: hidden;
+    margin: 10px 100px;
+    border-radius: 50%;
+}
+.homepage{
+    position: fixed;
+    clear: center;
+}
+li{
+    width: 50px;
+    height: 50px;
+    margin: 10px 10px;
+}
+
+header, footer{
+    float: left;
+    width: 60%;
+    margin: 10px 100px;
+    padding: 10px 10px;
+    font-size: 20px;
+    animation: muncul 2s;
+    background-color: green;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px black;
+}
+#main_logo{
+    border-radius: 50%;
+    align-items: center;
+    width: 15%;
+    height: 15%;
+}
+.ugm1{
+    animation: muncul1 2s;
+}
+#ugm{
+    width: 15%;
+    height: 15%;
+    margin: 0px, 10px, 0px 100px;
+    border-radius: 20px;
+    animation-duration: 2s;
+    animation-direction: alternate-reverse;
+    animation-iteration-count: infinite;
+    animation-name: ugm;
+}
+.img-shadow {
+    width: 130px;
+    height: 24px;
+    background-color: #444;
+    margin: 0 auto;
+    border-radius: 50%;
+    opacity: 16%;
+    filter: blur(7px);
+    animation: shadow 1.8s infinite alternate;
+  }
+@keyframes ugm{
+    0%{
+        transform: translateY(10%);
+    }
+}
+@keyframes shadow {
+    0%{
+      transform: scale(1, 1);
+    }
+    100%{
+      transform: scale(.85, .85);
+    }
+}
+@keyframes muncul {
+    0%{
+      transform: translateY(15px);
+      opacity: 0;
+    }
+}
+@keyframes muncul1 {
+    0%{
+      transform: translatex(15px);
+      opacity: 0;
+    }
+}
+@keyframes muncul2 {
+    0%{
+      transform: translatex(-15px);
+      opacity: 0;
+    }
+}
+@media (min-width: 400px)  and (max-width: 900px){
+    .content{
+        display: flex;
+        flex-direction: column;
+    }
+    #ugm{
+        margin: 100px 300px;
+        min-width: 300px
+    }
+    #text{
+        margin: auto;
+        float: none;
+        font-size: small;
+        width: 100%
+    }
+}
+@media screen and (max-width: 400px){
+    #ugm{
+        align-content: center;
+        min-width: 100px;
+        margin: 100px 100px;
+    }
+    ul{
+        max-width: 50px;
+    }
+}
